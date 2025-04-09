@@ -1,0 +1,18 @@
+# VS Code
+
+.vscode/
+pycache/
+*.pyc
+
+# Personal writing files (optional)
+
+writing/*.md
+
+# System files
+
+.DS_Store
+Thumbs.db
+
+# Logs
+
+script_log.txt
