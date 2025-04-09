@@ -1,2 +1,3 @@
 @echo off
-wsl -e bash -ic "python3 create_daily_file.py"
+cd %~dp0
+wsl -e bash -ic "cd $(wslpath '%~dp0') && python3 create_daily_file.py"

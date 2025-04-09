@@ -60,7 +60,13 @@ class DailyWritingGenerator:
         return True
 
 if __name__ == "__main__":
-    WRITING_FOLDER = os.getcwd()
+    # Get the project root directory (one level up from scripts folder)
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    project_root = os.path.dirname(script_dir)
+    
+    # Set writing folder to the "writing" subdirectory
+    WRITING_FOLDER = os.path.join(project_root, "writing")
+    
     generator = DailyWritingGenerator(WRITING_FOLDER)
     file_created = generator.create_daily_file()
     sys.exit(0 if file_created else 1)
